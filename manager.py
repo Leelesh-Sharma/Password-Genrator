@@ -9,7 +9,9 @@ def add():
 
 def view():
     with open('pwd','r') as file:
-        print(file.read())
+        data = file.read()
+        w,un,pd = data.split("|")
+        print("Website-"+w+"\nusername-"+un+"\npassword-"+pd)
 
 while True:
     action = input("\n What would you like to do \n for adding a password - type 'add' or for viewing them - type 'view' \n or press 'q' to quit.").lower()
